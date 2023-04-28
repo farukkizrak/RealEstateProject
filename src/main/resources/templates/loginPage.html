@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/login.css" rel="stylesheet">
+    
+</head>
+<body>
+  <div>
+    <a class="nav-link" href="index.html" 
+    style="font-size: x-large;border-radius: 5px;">
+    <img style="width: 30px;height: 30px" src="https://www.shareicon.net/data/128x128/2016/11/14/852470_home_512x512.png"><span style="font-size: xx-large;">Home</span></a>
+  </div>
+  <h2><strong>Yeni Evinize Hoşgeldiniz</strong></h2>
+  <div class="container" id="container">
+    <div class="form-container sign-up-container">
+      <form action="#">
+        <h1>Hesap Oluştur</h1>
+        <div class="social-container">
+          <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+          <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        
+        <input type="text" placeholder="Name" />
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <button>Kayıt Ol</button>
+      </form>
+    </div>
+    <div class="form-container sign-in-container">
+      <form action="#">
+        <h1>Giriş Yap</h1>
+        <div class="social-container">
+          <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+          <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <a href="#">Şifrenizi mi unuttunuz?</a>
+        <button>Giriş Yap</button>
+      </form>
+    </div>
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <h1>Hoşgeldiniz!</h1>
+          <p>Lütfen Kayıt Olmak İçin Kişisel Bilgilerinizi Giriniz</p>
+          <button class="ghost" id="signIn">Giriş Yap</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+          <h1>Hoşgeldiniz!</h1>
+          <p>Bizimle yeni evinize uzanan yolculuğunuza başlayalım</p>
+          <button class="ghost" id="signUp">Kayıt Ol</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+    <p>
+      - Yeni evinize hoşgeldiniz
+    </p>
+  </footer>
+    
+</body>
+</html>
+<script>
+  const signUpButton = document.getElementById('signUp');
+  const signInButton = document.getElementById('signIn');
+  const container = document.getElementById('container');
+
+  signUpButton.addEventListener('click', () => {
+    container.classList.add("right-panel-active");
+  });
+
+  signInButton.addEventListener('click', () => {
+    container.classList.remove("right-panel-active");
+  });
+</script>
